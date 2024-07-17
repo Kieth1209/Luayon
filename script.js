@@ -17,6 +17,7 @@ function getWeather() {
     .then(([currentWeather, forecastData]) => {
         if (currentWeather.cod === 200 && forecastData.cod === '200') {
             displayWeather(currentWeather, forecastData);
+            updateBackground(currentWeather.weather[0].main);
         } else {
             alert('City not found');
         }
@@ -44,4 +45,27 @@ function displayWeather(currentWeather, forecastData) {
             `).join('')}
         </div>
     `;
+}
+
+function updateBackground(weatherCondition) {
+    const body = document.querySelector('body');
+    let imageUrl = '';
+
+    switch (weatherCondition) {
+        case 'Clear':
+            imageUrl = 'https://google.com/clear-sky.jpg'; 
+            break;
+        case 'Clouds':
+            imageUrl = 'https://google.com/cloudy-sky.jpg'; 
+            break;
+        case 'Rain':
+            imageUrl = 'https://google.com/rainy-sky.jpg'; 
+            break;
+        default:
+            imageUrl = 'https://google.com/default-background.jpg'; 
+            break;
+    }
+    
+
+    body.style.backgroundImage = `url('${imageUrl}')`;
 }
