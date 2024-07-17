@@ -37,7 +37,7 @@ body {
 
 .weather-container h1 {
     margin-bottom: 20px;
-    color: #fff;
+    color: #000000;
 }
 
 .search {
@@ -57,7 +57,7 @@ body {
     border: none;
     border-radius: 5px;
     background-color: #007bff;
-    color: #fff;
+    color: #000000;
     cursor: pointer;
 }
 
