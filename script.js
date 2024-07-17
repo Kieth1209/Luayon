@@ -3,7 +3,7 @@ const apiKey = 'a26c1c5832a79ad0b510244c09786d2e';
 function getWeather() {
     const city = document.getElementById('city').value;
     if (!city) {
-        alert('Please Enter a City Name');
+        alert('Please enter a city name');
         return;
     }
 
@@ -47,25 +47,4 @@ function displayWeather(currentWeather, forecastData) {
     `;
 }
 
-function updateBackground(weatherCondition) {
-    const body = document.querySelector('body');
-    let imageUrl = '';
 
-    switch (weatherCondition) {
-        case 'Clear':
-            imageUrl = 'https://google.com/clear-sky.jpg'; 
-            break;
-        case 'Clouds':
-            imageUrl = 'https://google.com/cloudy-sky.jpg'; 
-            break;
-        case 'Rain':
-            imageUrl = 'https://google.com/rainy-sky.jpg'; 
-            break;
-        default:
-            imageUrl = 'https://google.com/default-background.jpg'; 
-            break;
-    }
-    
-
-    body.style.backgroundImage = `url('${imageUrl}')`;
-}
