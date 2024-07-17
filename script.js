@@ -32,9 +32,9 @@ function displayWeather(currentWeather, forecastData) {
         <p>Current Weather: ${currentWeather.weather[0].description}</p>
         <p>Humidity: ${currentWeather.main.humidity}%</p>
         <p>Wind Speed: ${currentWeather.wind.speed} m/s</p>
-        <h3>Next 5 Hours Forecast:</h3>
+        <h3>Next 6 Hours Forecast:</h3>
         <div class="forecast">
-            ${forecastData.list.slice(0, 5).map(item => `
+            ${forecastData.list.slice(0, 6).map(item => `
                 <div class="forecast-item">
                     <img class="icon" src="https://openweathermap.org/img/wn/${item.weather[0].icon}.png" alt="${item.weather[0].description}">
                     <p>${new Date(item.dt * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
