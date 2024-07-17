@@ -7,7 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden; /* Hide overflow to prevent scroll bars */
-    background-color: #688aa8; /* Fallback background color */
+    background-color: #3a3d3f; /* Fallback background color */
     background-image: url(''); /* Dynamic background image */
     background-size: cover;
     background-position: center;
